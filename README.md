@@ -45,3 +45,4 @@ else:
 ```
 
 This probably give a less accurate result, however for practical use this is much more pleasant.
+I'm wondering if there's a better way to approach this, instead of this "brute force" approach?
