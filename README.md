@@ -24,7 +24,7 @@ However, looking at the spectrogram when convolving a 'y' signal with the IR rev
 *Either I messed up the deconvolution somewhere and I'm not catching it, or the IR capture from The Garage clipped and we didn't notice when we took the measurements with Joel.* 
 I tried normalizing to prevent clipping but it's a lost cause, looking at the Deconvolved IR it seems like it clips... Why? I'm unsure. Our recorded sine sweep didn't clip at all so it makes me think it might be something else.
 
-I've high passed the trimmed BRIR (Trimmer 100 samps before peak, and 3000 after the peak) using a 4th order at 30 Hz to try and deal with it, however since clipping seemingly happens, I don't think there's much we can do?
+I've high passed the trimmed BRIR (Trimmed 100 samps before peak, and 3000 after the peak) using a 4th order at 30 Hz to try and deal with it, however since clipping seemingly happens, I don't think there's much we can do?
 It really could be a botched measurement and that makes me sad. Especially considering that people hadn't attempted BRIRs of The Garage previously.
 
 ```
