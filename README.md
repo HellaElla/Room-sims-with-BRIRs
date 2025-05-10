@@ -21,7 +21,8 @@ def create_inverse_sweep(sweep):
 and is then convolved with the recorded sweep in order to deconvolve and obtain IR. 
 However, looking at the spectrogram when convolving a 'y' signal with the IR reveals much low frequency content, making me think something went wrong here....
 
-*Either I messed up the deconvolution somewhere and I'm not catching it, or the IR capture from The Garage clipped and we didn't notice when we took the measurements with Joel.*
+*Either I messed up the deconvolution somewhere and I'm not catching it, or the IR capture from The Garage clipped and we didn't notice when we took the measurements with Joel.* 
+I tried normalizing to prevent clipping but it's a lost cause, looking at the Deconvolved IR it seems like it clipped when we took it. 
 
 I've high passed the trimmed BRIR (100 samps before peak, and 3000 after the peak) using a 4th order at 30 Hz and this seemed to fix the low frequency blowout... at least perceptually.
 
