@@ -21,7 +21,7 @@ def create_inverse_sweep(sweep):
 and is then convolved with the recorded sweep in order to deconvolve and obtain IR. 
 However, looking at the spectrogram when convolving a 'y' signal with the IR reveals much low frequency content, making me think something went wrong here....
 
-I've high passed the trimmer BRIR using a 4th order at 30 Hz and this seemed to fix the low frequency blowout... at least perceptually.
+I've high passed the trimmed BRIR (100 samps before peak, and 3000 after the peak) using a 4th order at 30 Hz and this seemed to fix the low frequency blowout... at least perceptually.
 
 ```
 # Design a high-pass filter
