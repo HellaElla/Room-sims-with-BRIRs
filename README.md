@@ -23,10 +23,8 @@ However, looking at the spectrogram when convolving a 'y' signal with the raw IR
 
 *Either I messed up the deconvolution somewhere and I'm not catching it, or the IR capture from The Garage clipped and we didn't notice when we took the measurements with Joel.* 
 
-I've high passed the trimmed BRIR (Trimmed 100 samps before peak, and 3000 after the peak) using a 4th order butterworth hp at 30 Hz to try and deal with it. Perceptually this is much more pleasant
-
-however since clipping seemingly happens, I don't think there's much we can to fix without taking sweeps again.
-It really could be a botched measurement and that makes me sad. Especially considering that people hadn't attempted BRIRs of The Garage previously.
+I've high passed the trimmed BRIR (Trimmed 100 samps before peak, and 3000 after the peak) using a 4th order butterworth hp at 30 Hz to try and deal with it. 
+This probably give a less accurate result, however for practical use this is much more pleasant than without...
 
 ```
 # Design a high-pass filter
@@ -49,7 +47,13 @@ else:
         brir_highpassed[:, channel] = sosfilt(sos, brir_trimmed_both[:, channel])
 ```
 
-This probably give a less accurate result, however for practical use this is much more pleasant than vanilla...
 I'm wondering if there's a better way to approach this, instead of this "brute force" approach?
+
+however since clipping seemingly happens, I don't think there's much we can to fix without taking sweeps again.
+It really could be a botched measurement and that makes me sad. Especially considering that people hadn't attempted BRIRs of The Garage previously.
+
+
+
+
 
 I also briefly looked into Toeplitz Deconvolution, but I didn't implement so just used "Vanilla" deconv.
