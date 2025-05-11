@@ -1,6 +1,8 @@
 # Convolving BRIRs
 
-This code aims to obtain IRs from recorded sine sweeps using a KU-100 binaural head microphone(s). 
+Please look at jupyter notebook file for full code.
+
+Aims to obtain IRs from recorded sine sweeps using a KU-100 binaural head microphone(s). 
 
 the inverse sweep is tackled like this: 
 
